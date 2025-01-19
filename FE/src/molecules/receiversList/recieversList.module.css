@@ -1,0 +1,111 @@
+.recieversList {
+  width: 397px;
+  height: 85vh;
+  border-right: var(--border);
+  padding: 20px 10px; /* Уменьшил padding для аккуратного вида */
+  background-color: var(--color-bg-light); /* Добавим светлый фон для контейнера */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+  border-radius: 8px; /* Лёгкое закругление */
+  overflow-y: auto; /* Прокрутка, если содержимое превышает высоту */
+}
+
+.recieversList h4 {
+  margin-left: 16px;
+  font-size: 16px;
+  color: var(--color-text-dark);
+  font-weight: 500; /* Сделаем заголовок чуть выразительнее */
+}
+
+.recieversList_userBox {
+  display: flex;
+  gap: 10px; /* Чуть больше пространства между аватаром и данными */
+  padding: 12px 16px; /* Увеличенный padding для большего пространства */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Добавлен эффект тени при наведении */
+  border-radius: 8px; /* Лёгкое закругление для каждой строки */
+}
+
+.recieversList_userBox:hover {
+  background-color: var(--color-bg-light-grey); /* Светлый серый фон при наведении */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Добавлена лёгкая тень */
+}
+
+.recieversList_userBox.active {
+  background-color: rgba(232, 231, 233, 0.37); /* Серый фон для активного пользователя */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Аналогичная тень для активного элемента */
+}
+
+.userBox_img {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--color-bg-light-grey); /* Более заметная граница */
+}
+
+.userBox_data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Уменьшено для компактного вида */
+  justify-content: center; /* Выровнено по вертикали */
+}
+
+.userBox_dataP1 {
+  font-size: 14px;
+  font-weight: 500; /* Чуть больше акцента на имени */
+  line-height: 18px;
+  color: var(--color-text-dark); /* Темнее текст для лучшей читаемости */
+}
+
+.userBox_dataP2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-text-grey);
+}
+
+/* Адаптивные стили */
+@media (max-width: 1400px) {
+  .recieversList {
+      width: 350px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .recieversList {
+      width: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .recieversList {
+      width: 200px;
+  }
+}
+
+@media (max-width: 568px) {
+  .recieversList_userBox {
+      flex-direction: column; /* Компактный вид */
+      align-items: center; /* Выровнено по центру */
+      gap: 5px;
+  }
+
+  .recieversList {
+      width: 150px;
+  }
+
+  .userBox_dataP1 {
+      display: none; /* Скрываем основной текст */
+  }
+}
+
+@media (max-width: 450px) {
+  .recieversList {
+      width: 130px;
+  }
+}
+
+@media (max-width: 420px) {
+  .recieversList {
+      width: 115px;
+  }
+}

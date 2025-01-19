@@ -1,0 +1,69 @@
+.button {
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Отступ между иконкой и текстом */
+    line-height: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+  }
+  .button:hover {
+    background-color: #23a7ff;
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  .button:active {
+    background-color: #003f8a;
+    transform: scale(0.95);
+  }
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-0.5px);
+    }
+    50% {
+      transform: translateX(0.51px);
+    }
+    75% {
+      transform: translateX(-0.5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Варианты кнопок */
+  .button.primary {
+    background-color: #0095f6;
+    color: white;
+  }
+  
+  .button.secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .button.danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Отключенная кнопка */
+  .button.disabled {
+    background-color: #d6d6d6;
+    color: #8c8c8c;
+    cursor: not-allowed;
+  }
+  
+  /* Иконка в кнопке */
+  .button-icon {
+    display: inline-flex;
+    align-items: center;
+  }
+  
